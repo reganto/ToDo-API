@@ -1,0 +1,33 @@
+Todo Api
+
+url: http://[hostname]/todo/api/v1.0/
+
+resources:
+
+HTTP Method                   URI                                                      Action
+
+POST                    http://[hostname]/todo/api/v1.0/users                        Create new user
+GET                     http://[hostname]/todo/api/v1.0/users/[token]                Retrive a user
+DELETE                  http://[hostname]/todo/api/v1.0/users/[token]                Delete a user
+
+GET                     http://[hostname]/todo/api/v1.0/tasks/[token]                Retrive list of tasks
+GET                     http://[hostname]/todo/api/v1.0/tasks/[task-id]/[token]      Retirve a task
+POST                    http://[hostname]/todo/api/v1.0/tasks/[token]                Create a new task
+Put                     http://[hostname]/todo/api/v1.0/tasks/[task-id]/[token]      Update an existing task
+DELETE                  http://[hostname]/todo/api/v1.0/tasks/[task-id]/[token]      Delete a task
+
+
+Task Model:
+
+id: unique identifier for tasks. Numberic type
+title: short task description. String type
+description: long task description. Text type
+done: task completion state. Boolean type
+uri: task uri. String type
+
+
+User Model:
+id: unique identifier for users. Numberic type
+username: username of user. String type
+token: authentication token. String type
+
